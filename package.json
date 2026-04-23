@@ -1,0 +1,14 @@
+{
+  "name": "healthsync-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "predev": "node scripts/kill-ports.js 5000 5173 5174 5175",
+    "dev": "node scripts/start-dev.js",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -24,14 +24,19 @@ echo 📦 Installing frontend dependencies...
 cd ../frontend
 call npm install
 
+REM Root Setup
+echo.
+echo 📦 Installing root dependencies...
+cd ..
+call npm install
+
 echo.
 echo ✅ Setup complete!
 echo.
 echo 📋 Next steps:
-echo 1. Open Terminal 1 (PowerShell) and run: cd backend; npm start
-echo 2. Open Terminal 2 (PowerShell) and run: cd frontend; npm run dev
-echo 3. Optional - Terminal 3: net start MongoDB (if not already running)
-echo 4. Open http://localhost:5173 in your browser
+echo 1. Open Terminal and run: npm run dev
+echo 2. Optional - in another terminal: net start MongoDB (if not already running)
+echo 3. Open http://localhost:5173 in your browser
 echo.
 echo 💡 For sign up test, use:
 echo    Email: test@example.com

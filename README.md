@@ -23,32 +23,20 @@
 # Windows - Double-click setup.bat
 # Or manually:
 cd backend && npm install && cd ../frontend && npm install
+cd .. && npm install
 ```
 
-### Step 2: Start Backend (Terminal 1)
+### Step 2: Start Everything
 ```bash
-cd backend
-npm start
-```
-
-**Expected Output:**
-```
-📍 Attempting to connect to MongoDB at: mongodb://127.0.0.1:27017/healthsync
-✅ MongoDB connected successfully
-🚀 HealthSync server running on port 5000
-```
-
-### Step 3: Start Frontend (Terminal 2)
-```bash
-cd frontend
 npm run dev
 ```
 
 **Expected Output:**
 ```
-VITE v8.0.1 ⚡ ready in 123 ms
-
-➜ Local: http://localhost:5173/
+> concurrently "npm --prefix backend run dev" "npm --prefix frontend run dev"
+📍 Attempting to connect to MongoDB at: mongodb://127.0.0.1:27017/healthsync
+✅ MongoDB connected successfully
+🚀 HealthSync server running on port 5000
 ```
 
 Then open: **http://localhost:5173**
